@@ -1,0 +1,2 @@
+INSERT INTO `informationdb`.`doclogin` (`ID4`, `Username`, `Password`) VALUES (NULL, 'sharman', '12345'), (NULL, 'touhid', '2345');
+

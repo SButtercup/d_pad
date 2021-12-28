@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1BC135E-88D7-4058-ACC5-243C8C6EB52E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>d_pad</RootNamespace>
+    <AssemblyName>d_pad</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>itextsharp\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>itextsharp\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>itextsharp\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.DataProfilingTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SqlServer.ScriptTask, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.5.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web.v20, Version=6.9.6.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNew.Designer.cs">
+      <DependentUpon>AddNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dbConnect.cs" />
+    <Compile Include="DoctorHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorHome.Designer.cs">
+      <DependentUpon>DoctorHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventsManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventsManager.Designer.cs">
+      <DependentUpon>EventsManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDrug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDrug.Designer.cs">
+      <DependentUpon>FormDrug.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="icd10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="icd10.Designer.cs">
+      <DependentUpon>icd10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="icd9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="icd9.Designer.cs">
+      <DependentUpon>icd9.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn2.Designer.cs">
+      <DependentUpon>LogIn2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="switch_module.cs" />
+    <EmbeddedResource Include="AddNew.resx">
+      <DependentUpon>AddNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorHome.resx">
+      <DependentUpon>DoctorHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventsManager.resx">
+      <DependentUpon>EventsManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDrug.resx">
+      <DependentUpon>FormDrug.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icd10.resx">
+      <DependentUpon>icd10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="icd9.resx">
+      <DependentUpon>icd9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn2.resx">
+      <DependentUpon>LogIn2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Stethoscope_By_Computer_Keyboard4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Stethoscope_By_Computer_Keyboard41.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Red-Cross-Nurse-Assistant-Training-e1376390911616.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Stethoscope_By_Computer_Keyboard43.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\4140_blue_abstract.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\blue-abstract-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\XrTjGXpiR.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\12201998-blue-stethoscope-in-shape-of-heart-isolated-on-white-Stock-Photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\4140_blue_abstract2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\Refresh-Button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\images\stock.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
